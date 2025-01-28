@@ -21,10 +21,13 @@ app.use("/locations", locationRoutes);
 
 // MongoDB Connection
 mongoose
-  .connect("mongodb://localhost:27017/localmartdb", {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect(
+    "mongodb+srv://root:P45ueZlg6thjdHnr@local-mart-c1.cuu3p.mongodb.net/localmartdbv1",
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
   .then(() => console.log("MongoDB connected"))
   .catch((err) => console.error("MongoDB connection error:", err));
 
